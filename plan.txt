@@ -1,0 +1,22 @@
+monitor length of array
+
+[while current_length:
+	if current_length < new_length:
+		numitems = new_length - current_length
+		send text(range(0,numitems-1,1))
+	else:
+		sleep(5) [used]]
+
+[done] Automatically scrape (using selenium) my activity feed 
+[done] and send any update to my custom api
+
+[done] api will recieve updates
+
+[done] react app will render updates
+on first launch, react app will check local storage and set current activity list to whatever is in local storage, thereafter, will update with new events
+
+TODO
+
+reverse order of twitch updates so that new updates appear at the bottom of the page OR reroute dlive updates to beginning of array instead of end
+
+add an auto-scrolling feature
