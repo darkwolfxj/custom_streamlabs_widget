@@ -14,8 +14,10 @@ function App() {
             .then(res => {
                 console.log("this is res.data", res.data)
                 const formAct = []
+                // eslint-disable-next-line
                 newLen = res.data.length/2
                 if (newLen !== currLen){
+                // eslint-disable-next-line
                     currLen = newLen;
                     for(let i=0; i<res.data.length;i+=2){
                         formAct.push((res.data[i].includes(" Twitch") ? res.data[i].replace(" Twitch", "") : res.data[i].replace(" DLive", "")) + " " + res.data[i + 1]);
