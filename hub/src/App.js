@@ -38,6 +38,7 @@ function App() {
                 <iframe id="restream-chat" title="ReStream Chat" src="https://chat.restream.io/embed?token=7853956a-96dd-4ae3-9634-9e4dcdc2317b"/>
             </div>
             <div>
+                <button onClick={() => axios.get("https://custom-streamlabs-widget-api.herokuapp.com/")}>Refresh</button>
                 <button onClick={() => axios.post("https://custom-streamlabs-widget-api.herokuapp.com/reset").then(() => console.log("reset successfully"))}>Reset</button>
             </div>
         </div>    
