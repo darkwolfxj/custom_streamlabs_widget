@@ -28,9 +28,8 @@ function App() {
                 }
                 
             })
-        setInterval(activityGetter, 3000)
     },[activity])
-    
+    setInterval(activityGetter, 3000)
   return (
     <div className="App">
         <div style={{display: "flex", flexDirection: "row", justifyContent: "space-between"}}>

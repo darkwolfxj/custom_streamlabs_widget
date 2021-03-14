@@ -80,3 +80,7 @@ dlive = DLA()
 dlive.login()
 sleep(3)
 set_interval(dlive.get_activity, 1)
+def refresh():
+    twitch.get_activity()
+    dlive.get_activity()
+    
