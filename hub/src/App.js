@@ -8,8 +8,7 @@ function App() {
     const [activity, setActivity] = useState([])
     let currLen = 0;
     let newLen = 0;
-    useEffect(() => {
-        const activityGetter = () => 
+    const activityGetter = () => 
         axios.get("https://custom-streamlabs-widget-api.herokuapp.com/")
             .then(res => {
                 console.log("this is res.data", res.data)
@@ -28,6 +27,8 @@ function App() {
                 }
                 
             })
+    useEffect(() => {
+        activityGetter()
     },[activity])
     setInterval(activityGetter, 3000)
   return (
