@@ -29,6 +29,7 @@ function App() {
             })
     useEffect(() => {
         activityGetter()
+// eslint-disable-next-line
     },[activity])
     setInterval(activityGetter, 3000)
   return (

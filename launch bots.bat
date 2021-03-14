@@ -1,1 +1,1 @@
-python bots.py
+python -i bots.py
