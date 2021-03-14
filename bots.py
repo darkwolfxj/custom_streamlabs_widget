@@ -81,6 +81,12 @@ dlive.login()
 sleep(3)
 set_interval(dlive.get_activity, 1)
 def refresh():
+    twitch.list2.len = 0
+    twitch.listlen2 = 0
+    twitch.diff2 = 0
     twitch.get_activity()
+    dlive.list1.len = 0
+    dlive.listlen1 = 0
+    dlive.diff1 = 0
     dlive.get_activity()
     
