@@ -5,6 +5,8 @@
     margin-top: 2px;
     background-color: rgba(0,0,0,0);
     background: transparent;
+    align-items: center;
+    color: white;
 }
 
 .activity::-webkit-scrollbar {
@@ -15,4 +17,15 @@
 .activity {
     -ms-overflow-style: none;
     scrollbar-width: none;
+}
+@keyframes act {
+    0% {
+        transform: translate(1080px)
+    }
+    100% {
+        transform: translate(0px)
+    }
+}
+.anim {
+    animation: act 1s ease;
 }

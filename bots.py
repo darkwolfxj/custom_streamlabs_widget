@@ -40,7 +40,7 @@ class DLA():
             r = requests.post("https://custom-streamlabs-widget-api.herokuapp.com/", json = {"update": [x + " DLive" for x in currentlist1[0:self.diff1]]} )
             print(r.json())
         else:
-            sleep(3)
+            sleep(1)
 
 
 class TwitchActivity():
@@ -80,13 +80,20 @@ dlive = DLA()
 dlive.login()
 sleep(3)
 set_interval(dlive.get_activity, 1)
-def refresh():
+def refresh_twitch():
     twitch.list2 = []
     twitch.listlen2 = 0
     twitch.diff2 = 0
     twitch.get_activity()
+    print("refreshed twitch")
+def refresh_dlive():
     dlive.list1 = []
     dlive.listlen1 = 0
     dlive.diff1 = 0
     dlive.get_activity()
+    print("refreshed dlive")
+
+def refresh():
+    refresh_twitch()
+    refresh_dlive()
     
