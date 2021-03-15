@@ -34,16 +34,16 @@ function App() {
     setInterval(activityGetter, 3000)
   return (
     <div className="App">
-        <div style={{display: "flex", flexDirection: "row", justifyContent: "space-between"}}>
-            <div>
-                <iframe id="restream-chat" title="ReStream Chat" src="https://chat.restream.io/chat"/>
+        <div style={{display: "flex", flexDirection: "column-reverse", justifyContent: "space-between"}}>
+            <div style={{margin: "2px"}}>
+                <iframe height="250px" style={{borderRadius: "25px", backgroundColor: "rgba(0,0,0,0)"}} width="100%" id="restream-chat" title="ReStream Chat" src="https://chat.restream.io/embed?token=7853956a-96dd-4ae3-9634-9e4dcdc2317b"/>
             </div>
-            <div>
-                <button onClick={() => axios.get("https://custom-streamlabs-widget-api.herokuapp.com/")}>Refresh</button>
-                <button onClick={() => axios.post("https://custom-streamlabs-widget-api.herokuapp.com/reset").then(() => console.log("reset successfully"))}>Reset</button>
+            <div style={{display: "flex", justifyContent: "space-around", margin: "2px"}}>
+                <button style={{color: "white", backgroundColor: "green", border: "none", borderRadius: "25px"}} onClick={() => axios.get("https://custom-streamlabs-widget-api.herokuapp.com/")}>Refresh</button>
+                <button style={{color: "white", backgroundColor: "red", border: "none", borderRadius: "25px"}} onClick={() => axios.post("https://custom-streamlabs-widget-api.herokuapp.com/reset").then(() => console.log("reset successfully"))}>Reset</button>
             </div>
         </div>    
-                <>
+        <div className="activity" style={{margin: "2px", height: "210px", overflowY: "scroll", borderRadius: "25px", padding: "10px", border: "1px solid orange", boxSizing: "content-box"}}>
             {
                 activity.map(x => {
                     console.log("rendered ", x)
@@ -55,7 +55,7 @@ function App() {
                             }
                 )
             }
-        </>
+        </div>    
     </div>
   );
 }

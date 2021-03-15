@@ -1,0 +1,18 @@
+.App {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-around;
+    margin-top: 2px;
+    background-color: rgba(0,0,0,0);
+    background: transparent;
+}
+
+.activity::-webkit-scrollbar {
+    display: none;
+    background: transparent;
+}
+
+.activity {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
