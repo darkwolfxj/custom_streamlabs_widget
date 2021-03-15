@@ -36,7 +36,7 @@ function App() {
     <div className="App">
         <div style={{display: "flex", flexDirection: "row", justifyContent: "space-between"}}>
             <div>
-                <iframe id="restream-chat" title="ReStream Chat" src="https://chat.restream.io/embed?token=7853956a-96dd-4ae3-9634-9e4dcdc2317b"/>
+                <iframe id="restream-chat" title="ReStream Chat" src="https://chat.restream.io/chat"/>
             </div>
             <div>
                 <button onClick={() => axios.get("https://custom-streamlabs-widget-api.herokuapp.com/")}>Refresh</button>
