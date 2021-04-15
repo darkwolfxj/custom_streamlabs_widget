@@ -56,7 +56,7 @@ function App() {
                                     <button style={{color: "white", backgroundColor: "red", border: "none", borderRadius: "25px"}} onClick={() => axios.post("https://custom-streamlabs-widget-api.herokuapp.com/reset").then(() => console.log("reset successfully"))}>Reset</button>
                                 </div>
                             </div>    
-                            <div id="activity" className="activity" style={{display: "flex", flexDirection: "column", width: "96.5%", height: "210px", overflowY: "scroll", borderRadius: "25px", padding: "10px", border: "1px solid orange", boxSizing: "content-box"}}>
+                            <div id="activity" className="activity" style={{display: "flex", flexDirection: "column", width: "96.5%", height: "210px", overflowY: "scroll", borderRadius: "25px", padding: "10px", border: "1px solid rgba(0,0,0,0)", boxSizing: "content-box"}}>
 
                                 {
                                     mostRecent ? 
