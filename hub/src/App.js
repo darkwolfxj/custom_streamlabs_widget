@@ -49,7 +49,7 @@ function App() {
                         <>
                             <div style={{display: "flex", flexDirection: "column-reverse", justifyContent: "space-between", width: "99%"}}>
                                 <div style={{display: "flex", justifyItems: "center"}}>
-                                    <iframe height="200px" style={{borderRadius: "25px", background-color: "rgba(0,0,0,0)"}} width="200%" id="restream-chat" title="ReStream Chat" src="https://chat.restream.io/embed?token=7853956a-96dd-4ae3-9634-9e4dcdc2317b"/>
+                                    <iframe height="200px" style={{borderRadius: "25px", backgroundColor: "rgba(0,0,0,0)"}} width="200%" id="restream-chat" title="ReStream Chat" src="https://chat.restream.io/embed?token=7853956a-96dd-4ae3-9634-9e4dcdc2317b"/>
                                 </div>
                                 <div style={{display: "flex", justifyContent: "space-around", margin: "2px"}}>
                                     <button style={{color: "white", backgroundColor: "green", border: "none", borderRadius: "25px"}} onClick={() => axios.get("https://custom-streamlabs-widget-api.herokuapp.com/")}>Refresh</button>
